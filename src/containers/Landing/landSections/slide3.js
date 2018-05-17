@@ -1,19 +1,20 @@
 import React from "react";
+import { data } from '../../../globalData'
 
 const slideThree = () => {
   return (
-    <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <div class="row center">
-            <h5 class="header col s12 light">
-              A modern responsive front-end framework based on Material Design
+    <div className="parallax-container valign-wrapper">
+      <div className="section no-pad-bot">
+        <div className="container">
+          <div className="row center">
+            <h5 className="header col s12 light">
+             {data.landing.thirdSlide_title}
             </h5>
           </div>
         </div>
       </div>
-      <div class="parallax">
-        <img src="assets/images/background3.jpg" alt="Unsplashed background img 3" />
+      <div className="parallax">
+        <img src={data.landing.thirdSlide_img_src} alt="Unsplashed background img 3" />
       </div>
     </div>
   );

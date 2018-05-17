@@ -1,49 +1,45 @@
-import React from "react";
+import React, { Component } from "react";
+import logo from "./logo.png";
+import { navigationLink } from "../../globalData.js";
+import _ from "lodash";
 
-const Header = () => {
-  return (
-    <div>
-      <nav class="white">
-        <div class="nav-wrapper container">
-          <a id="logo-container" href="#top" class="brand-logo">
-            Logo
-          </a>
-          <ul class="right hide-on-med-and-down">
-            <li>
-              <a href="#sec1">Navbar Link</a>
-            </li>
-            <li>
-              <a href="#sec2">Navbar Link</a>
-            </li>
-            <li>
-              <a href="#sec3">Navbar Link</a>
-            </li>
-            <li>
-              <a href="#sec4">Navbar Link</a>
-            </li>
-          </ul>
+class Header extends Component {
 
-          <ul id="nav-mobile" class="sidenav">
-            <li>
-              <a href="#sec1">Navbar Link</a>
-            </li>
-            <li>
-              <a href="#sec2">Navbar Link</a>
-            </li>
-            <li>
-              <a href="#sec3">Navbar Link</a>
-            </li>
-            <li>
-              <a href="#sec4">Navbar Link</a>
-            </li>
-          </ul>
-          <a href="#mobile" data-target="nav-mobile" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-          </a>
-        </div>
-      </nav>
-    </div>
-  );
-};
+  renderNavLink() {
+    return _.map(navigationLink, ({ navLink, href }) => {
+      return (
+        <li key={navLink}>
+          <a href={href}>{navLink}</a>
+        </li>
+      );
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <nav className="white">
+          <div className="nav-wrapper container">
+            <a id="logo-container" href="#top" className="brand-logo">
+              <img src={logo} alt="logo" />
+            </a>
+            <ul className="right hide-on-med-and-down">{this.renderNavLink()}</ul>
+
+            <ul id="nav-mobile" className="sidenav">
+              {this.renderNavLink()}
+            </ul>
+            <a
+              href="#mobile"
+              data-target="nav-mobile"
+              className="sidenav-trigger"
+            >
+              <i className="material-icons">menu</i>
+            </a>
+          </div>
+        </nav>
+      </div>
+    );
+  }
+}
 
 export default Header;

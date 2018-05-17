@@ -1,4 +1,5 @@
 import React from "react";
+import { data } from '../../../globalData' 
 
 const slideTwo = () => {
   return (
@@ -7,13 +8,13 @@ const slideTwo = () => {
         <div className="container">
           <div className="row center">
             <h5 className="header col s12 light">
-              A modern responsive front-end framework based on Material Design
+              {data.landing.secondSlide_title}
             </h5>
           </div>
         </div>
       </div>
       <div className="parallax">
-        <img src="assets/images/background2.jpg" alt="Unsplashed background img 2" />
+        <img src={data.landing.secondSlide_img_src} alt="Unsplashed background img 2" />
       </div>
     </div>
   );

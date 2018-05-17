@@ -1,0 +1,12 @@
+.slide_title {
+    text-shadow: 1px 0px 0px #67c2c5, 0px 1px 0px #67c2c5, 2px 1px 0px #67c2c5,
+    1px 2px 0px #67c2c5, 3px 2px 0px #67c2c5, 2px 3px 0px #67c2c5,
+    4px 3px 0px #67c2c5, 3px 4px 0px #67c2c5, 5px 4px 0px #67c2c5,
+    4px 5px 0px #67c2c5, 6px 5px 0px #67c2c5, 5px 6px 0px #67c2c5,
+    7px 6px 0px #67c2c5, 6px 7px 0px #67c2c5, 8px 7px 0px #aff1f9,
+    7px 8px 0px #aff1f9, 9px 8px 0px #aff1f9, 8px 9px 0px #aff1f9,
+    10px 9px 0px #aff1f9, 9px 10px 0px #aff1f9, 11px 10px 0px #aff1f9,
+    10px 11px 0px #aff1f9;
+    letter-spacing: 0.2em
+}
+
