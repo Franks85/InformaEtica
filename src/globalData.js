@@ -29,7 +29,7 @@ export const data = {
 
 export const navigationLink = [
   { navLink: "Link1", href: "#sec1" },
-  { navLink: "Link2", href: "#sec1" },
-  { navLink: "Link3", href: "#sec1" },
-  { navLink: "Link4", href: "#sec1" }
+  { navLink: "Link2", href: "#sec2" },
+  { navLink: "Link3", href: "#sec3" },
+  { navLink: "Link4", href: "#sec4" }
 ];
